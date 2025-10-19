@@ -2,7 +2,6 @@
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -10,7 +9,7 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Etienne - A Minimalist Dark Portfolio" />
+		<meta name="description" content="Eric Alex - A Creative Portfolio" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -21,37 +20,103 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<slot />
+        <header class="main-header">
+            <div class="logo">
+                <a href="/">Eric Alex</a>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="nav-link">WORK</a>
+                <a href="#" class="nav-link">PROJECTS</a>
+                <a href="#" class="nav-link">CREATIVES</a>
+                <a href="/" class="nav-link">BLOGS</a>
+                <a href="#" class="nav-link">SHOP</a>
+            </nav>
+            <div class="menu-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+        </header>
+
+		<slot /> <footer class="main-footer">
+            <div class="footer-column">
+                <h4>Eric Alex</h4>
+                <p>Made by Eric Alex</p>
+            </div>
+            <div class="footer-column">
+                <h4>Let's Work Together</h4>
+                <p>eric14alex@gmail.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>You can follow us</h4>
+                <div class="social-links">
+                    <a href="#">Fb.</a>
+                    <a href="#">Tw.</a>
+                    <a href="#">In.</a>
+                    <a href="#">Be.</a>
+                </div>
+            </div>
+        </footer>
 	</body>
 </html>
 
 <style is:global>
 	:root {
-		--background-color: #1A1A1A; /* Dark background */
-		--text-color: #E0E0E0;      /* Light text */
-        --light-text-color: #A0A0A0; /* Slightly lighter text for secondary elements */
-        --border-color: #333333;    /* Darker borders */
+		--background-color: #1A1A1A;
+		--text-color: #E0E0E0;
+        --light-text-color: #A0A0A0;
+        --border-color: #333333;
 	}
-
 	html {
 		font-family: 'Inter', sans-serif;
 		background: var(--background-color);
 		color: var(--text-color);
-        scroll-behavior: smooth; /* Keep for potential future scrolling */
 	}
-
 	body {
 		margin: 0;
         padding: 0;
         font-size: 14px;
 	}
+    * { box-sizing: border-box; }
+    a { text-decoration: none; color: inherit; }
+</style>
 
-    * {
-        box-sizing: border-box;
+<style>
+    .main-header {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2.5rem;
+        border-bottom: 1px solid var(--border-color);
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(26, 26, 26, 0.8);
+        backdrop-filter: blur(5px);
     }
+    .logo { font-weight: 500; font-size: 1.2rem; color: var(--text-color); }
+    .main-nav { display: flex; gap: 1.5rem; margin-left: auto; }
+    .nav-link { font-size: 0.8rem; letter-spacing: 0.1em; font-weight: 500; color: var(--light-text-color); transition: color 0.3s; }
+    .nav-link:hover { color: var(--text-color); }
+    .menu-icon { margin-left: 2rem; cursor: pointer; }
 
-    a {
-        text-decoration: none;
-        color: inherit;
+    .main-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 2.5rem;
+        border-top: 1px solid var(--border-color);
+        margin-top: auto;
+    }
+    .footer-column { flex-basis: 30%; }
+    .footer-column h4 { margin: 0 0 0.5rem 0; font-size: 0.9rem; font-weight: 500; color: var(--text-color); }
+    .footer-column p { margin: 0; color: var(--light-text-color); font-size: 0.85rem; }
+    .social-links { display: flex; gap: 0.8rem; color: var(--light-text-color); font-size: 0.85rem; }
+    .social-links a:hover { color: var(--text-color); }
+
+    @media (max-width: 1024px) {
+        .main-nav { display: none; }
+    }
+    @media (max-width: 768px) {
+        .main-header, .main-footer { padding: 1rem; }
+        .footer-column { display: none; }
+        .footer-column:first-child { display: block; }
     }
 </style>
