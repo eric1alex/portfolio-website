@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const creatives = [
+  { title: "Photography", link: "/creatives/photography" },
+  { title: "Videography", link: "/creatives/videography" },
+  { title: "Graphic Design", link: "/creatives/graphic-design" },
+];
+---
+
+<Layout title="Eric Alex | Creatives">
+  <main>
+    <!-- Hero / Page Title -->
+    <section class="creatives-hero">
+      <div class="creatives-hero-inner">
+        <h1 class="creatives-title">Creatives</h1>
+        <p class="creatives-lead">Explore my photography, videography, and graphic design work.</p>
+      </div>
+    </section>
+
+    <!-- Creative Options Grid -->
+    <section class="creatives-grid-section">
+      <div class="creatives-grid">
+        {creatives.map((c) => (
+          <a href={c.link} class="creative-card">
+            <span class="creative-title">{c.title}</span>
+          </a>
+        ))}
+      </div>
+
+      <!-- Feeling Lucky Button -->
+      <div class="bottom-right-btn">
+        <button class="btn-lucky" id="luckyBtn">Feeling Lucky</button>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const creativeLinks = {Photography: '/creatives/photography', Videography: '/creatives/videography', 'Graphic Design': '/creatives/graphic-design'};
+  document.getElementById('luckyBtn').addEventListener('click', () => {
+    const keys = Object.keys(creativeLinks);
+    const randomKey = keys[Math.floor(Math.random() * keys.length)];
+    window.location.href = creativeLinks[randomKey];
+  });
+</script>
+
+<style>
+/* Hero */
+.creatives-hero { width: 100%; padding: 3rem 1.5rem 1.5rem; }
+.creatives-hero-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+.creatives-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-color); }
+.creatives-lead { margin: 0; color: rgba(255,255,255,0.7); font-size: 1rem; }
+
+/* Grid Section */
+.creatives-grid-section { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem 4rem; position: relative; }
+.creatives-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+
+.creative-card {
+  display: flex; align-items: center; justify-content: center;
+  padding: 2rem; border-radius: 16px; font-size: 1.2rem; font-weight: 600;
+  background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none; color: var(--text-color); text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.creative-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  background: rgba(255,255,255,0.06);
+}
+
+.creative-title { display: block; }
+
+/* Feeling Lucky Button */
+.bottom-right-btn {
+  position: absolute;
+  bottom: 0; right: 0;
+  margin: 2rem;
+}
+
+.btn-lucky {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-lucky:hover {
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .creatives-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+</style>

@@ -10,10 +10,89 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Your content starts here.</h2>
-      <p>This is where you can add more sections and information to your website.</p>
-    </section>
+<section class="about-accordion">
+  <div class="accordion-container">
+    <h2 class="section-title">A Little About Me</h2>
+    <h3 class="section-subtitle">Eric Alex</h3>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">
+        <span>Intro</span>
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <p>A results-driven digital marketer & creative strategist, passionate about growth, creatives, and storytelling that drives real impact.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">
+        <span>Expertise</span>
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>Photography</li>
+          <li>Videography</li>
+          <li>Graphic Design</li>
+          <li>Marketing</li>
+          <li>Business Development</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">
+        <span>Latest Work</span>
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <li>The Prompt Lib</li>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">
+        <span>Hobbies</span>
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li>Gaming (A lot of ACC)</li>
+          <li>Football</li>
+          <li>Experimenting new things</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">
+        <span>Contact Info</span>
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <p>Email: <a href="mailto:eric14alex@gmail.com">eric14alex@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-toggle">
+        <span>Quote</span>
+        <span class="arrow">&#9660;</span>
+      </button>
+      <div class="accordion-content">
+        <p>No Risk, Full Push</p>
+      </div>
+    </div>
+
+    <!-- Bottom-right button -->
+    <div class="bottom-right-btn">
+      <a href="/about" class="btn-link">Know More About Me</a>
+    </div>
+  </div>
+</section>
+
+
   </main>
 </Layout>
 
@@ -60,7 +139,25 @@ import Layout from "../layouts/Layout.astro";
     }
   });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.accordion-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+        // Close all
+        document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + 20 + 'px';
+        }
+      });
+    });
+  });
 </script>
+
 
 <style>
   .hero-section {
@@ -121,5 +218,120 @@ import Layout from "../layouts/Layout.astro";
       right: -0.1rem;
     }
   }
+.about-accordion {
+  width: 90%;
+  max-width: 900px;
+  margin: 3rem auto;
+  font-family: 'Inter', sans-serif;
+  overflow: visible;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: -.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  font-weight: 100;
+  color: var(--text-color);
+}
+
+/* Accordion item */
+.accordion-item {
+  background: rgba(241, 227, 227, 0.0);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.accordion-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-toggle .arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when active */
+.accordion-item.active .accordion-toggle .arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-content p, .accordion-content ul {
+  margin: 1rem 0;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.accordion-content ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+
+/* Button */
+.btn-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: rgba(255,255,255,0.1);
+  color: var(--text-color);
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+/* Bottom-right button */
+.bottom-right-btn {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .accordion-toggle {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .accordion-grid {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+}
+
+
 </style>
-</style>
+
