@@ -1,122 +1,211 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Eric Alex - A Creative Portfolio" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-	</head>
-	<body>
-        <header class="main-header">
-            <div class="logo">
-                <a href="/">Eric Alex</a>
-            </div>
-            <nav class="main-nav">
-                <a href="#" class="nav-link">WORK</a>
-                <a href="#" class="nav-link">PROJECTS</a>
-                <a href="#" class="nav-link">CREATIVES</a>
-                <a href="/" class="nav-link">BLOGS</a>
-                <a href="#" class="nav-link">SHOP</a>
-            </nav>
-            <div class="menu-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            </div>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Eric Alex - A Creative Portfolio" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
 
-		<slot /> <footer class="main-footer">
-            <div class="footer-column">
-                <h4>Eric Alex</h4>
-                <p>Made by Eric Alex</p>
-            </div>
-            <div class="footer-column">
-                <h4>Let's Work Together</h4>
-                <p>eric14alex@gmail.com</p>
-            </div>
-            <div class="footer-column">
-                <h4>You can follow us</h4>
-                <div class="social-links">
-                    <a href="#">Fb.</a>
-                    <a href="#">Tw.</a>
-                    <a href="#">In.</a>
-                    <a href="#">Be.</a>
-                </div>
-            </div>
-        </footer>
-	</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <a href="/">Eric Alex</a>
+      </div>
+      <nav class="main-nav">
+        <a href="#" class="nav-link">WORK</a>
+        <a href="#" class="nav-link">PROJECTS</a>
+        <a href="#" class="nav-link">CREATIVES</a>
+        <a href="#" class="nav-link">BLOGS</a>
+        <a href="#" class="nav-link">SHOP</a>
+      </nav>
+      <div class="menu-icon" id="menuBtn">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6H20M4 12H20M4 18H20" />
+        </svg>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-topbar">
+        <button id="closeMenu" aria-label="Close menu">← Back</button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="#" class="mobile-link">WORK</a>
+        <a href="#" class="mobile-link">PROJECTS</a>
+        <a href="#" class="mobile-link">CREATIVES</a>
+        <a href="#" class="mobile-link">BLOGS</a>
+        <a href="#" class="mobile-link">SHOP</a>
+      </nav>
+    </div>
+
+    <slot />
+
+    <footer class="main-footer">
+      <div class="footer-column">
+        <h4>Eric Alex</h4>
+        <p>Made by Eric Alex</p>
+      </div>
+      <div class="footer-column">
+        <h4>Let's Work Together</h4>
+        <p>eric14alex@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h4>You can follow us</h4>
+        <div class="social-links">
+          <a href="#">Fb.</a>
+          <a href="#">Tw.</a>
+          <a href="#">In.</a>
+          <a href="#">Be.</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeBtn = document.getElementById("closeMenu");
+
+      menuBtn.addEventListener("click", () => mobileMenu.classList.add("open"));
+      closeBtn.addEventListener("click", () => mobileMenu.classList.remove("open"));
+    </script>
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		--background-color: #1A1A1A;
-		--text-color: #E0E0E0;
-        --light-text-color: #A0A0A0;
-        --border-color: #333333;
-	}
-	html {
-		font-family: 'Inter', sans-serif;
-		background: var(--background-color);
-		color: var(--text-color);
-	}
-	body {
-		margin: 0;
-        padding: 0;
-        font-size: 14px;
-	}
-    * { box-sizing: border-box; }
-    a { text-decoration: none; color: inherit; }
+  :root {
+    --background-color: #1A1A1A;
+    --text-color: #E0E0E0;
+    --light-text-color: #A0A0A0;
+    --border-color: #333333;
+  }
+  html {
+    font-family: 'Inter', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+  * { box-sizing: border-box; }
+  a { text-decoration: none; color: inherit; }
 </style>
 
 <style>
-    .main-header {
-        display: flex;
-        align-items: center;
-        padding: 1.5rem 2.5rem;
-        border-bottom: 1px solid var(--border-color);
-        width: 100%;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        background-color: rgba(26, 26, 26, 0.8);
-        backdrop-filter: blur(5px);
-    }
-    .logo { font-weight: 500; font-size: 1.2rem; color: var(--text-color); }
-    .main-nav { display: flex; gap: 1.5rem; margin-left: auto; }
-    .nav-link { font-size: 0.8rem; letter-spacing: 0.1em; font-weight: 500; color: var(--light-text-color); transition: color 0.3s; }
-    .nav-link:hover { color: var(--text-color); }
-    .menu-icon { margin-left: 2rem; cursor: pointer; }
+  /* HEADER */
+  .main-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: rgba(26, 26, 26, 1);
+    backdrop-filter: blur(5px);
+  }
+  .logo { font-weight: 500; font-size: 1.2rem; color: var(--text-color); }
+  .main-nav { display: flex; gap: 1.5rem; margin-left: auto; }
+  .nav-link { font-size: 0.8rem; letter-spacing: 0.1em; font-weight: 500; color: var(--light-text-color); transition: color 0.3s; }
+  .nav-link:hover { color: var(--text-color); }
+  .menu-icon {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+  }
 
-    .main-footer {
-        display: flex;
-        justify-content: space-between;
-        padding: 1.5rem 2.5rem;
-        border-top: 1px solid var(--border-color);
-        margin-top: auto;
-    }
-    .footer-column { flex-basis: 30%; }
-    .footer-column h4 { margin: 0 0 0.5rem 0; font-size: 0.9rem; font-weight: 500; color: var(--text-color); }
-    .footer-column p { margin: 0; color: var(--light-text-color); font-size: 0.85rem; }
-    .social-links { display: flex; gap: 0.8rem; color: var(--light-text-color); font-size: 0.85rem; }
-    .social-links a:hover { color: var(--text-color); }
+  /* FOOTER */
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+  }
+  .footer-column { flex-basis: 30%; }
+  .footer-column h4 { margin: 0 0 0.5rem 0; font-size: 0.9rem; font-weight: 500; color: var(--text-color); }
+  .footer-column p { margin: 0; color: var(--light-text-color); font-size: 0.85rem; }
+  .social-links { display: flex; gap: 0.8rem; color: var(--light-text-color); font-size: 0.85rem; }
+  .social-links a:hover { color: var(--text-color); }
 
-    @media (max-width: 1024px) {
-        .main-nav { display: none; }
-    }
-    @media (max-width: 768px) {
-        .main-header, .main-footer { padding: 1rem; }
-        .footer-column { display: none; }
-        .footer-column:first-child { display: block; }
-    }
+  /* MOBILE MENU */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .mobile-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-topbar {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  #closeMenu {
+    background: none;
+    border: none;
+    color: var(--light-text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  #closeMenu:hover { color: var(--text-color); }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    text-align: center;
+  }
+
+  .mobile-link {
+    color: var(--text-color);
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    transition: opacity 0.3s;
+  }
+  .mobile-link:hover { opacity: 0.7; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .main-nav { display: none; }
+    .menu-icon { display: block; }
+  }
+  @media (max-width: 768px) {
+    .main-header, .main-footer { padding: 1rem; }
+    .footer-column { display: none; }
+    .footer-column:first-child { display: block; }
+  }
 </style>
