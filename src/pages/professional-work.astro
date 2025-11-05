@@ -3,210 +3,253 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Eric Alex | Professional Work">
-  <main class="work-page">
-
+  <main>
     <section class="work-hero">
-      <h1>Showcasing my talent and passion</h1>
-      <div class="hero-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-bulb">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M9 16a5 5 0 1 0 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"></path>
-          <path d="M9.7 17l4.6 0"></path>
-        </svg>
+      <h1>
+        <span class="gradient-text">Showcasing my talent</span>
+        <span class="gradient-text">and passion</span>
+      </h1>
+      <p class="hero-subtitle">How I Combine design and technology</p>
+      
+      <div class="scroll-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 6l0 4" /> <path d="M12 3a4 4 0 0 1 4 4v10a4 4 0 0 1 -8 0v-10a4 4 0 0 1 4 -4z" /> </svg>
       </div>
-    </section>
-
-    <section class="intro-section">
-      <p class="hero-subtitle">
-        Discover my skills and creativity in action, with just one click.
-      </p>
-      <p class="current-work-at">
-        Currently work at <a href="#" class="company-link">Indiahikes</a>
-      </p>
     </section>
 
     <section class="project-grid-section">
+      <div class="project-grid-header">
+        <p class="section-label">selected projects</p>
+        <h2 class="section-title">
+          Discover my skills and creativity in action, with just one click.
+        </h2>
+      </div>
+
       <div class="project-grid">
-        
         <a href="#" class="project-card">
-          <img src="/assets/work1.png" alt="Project 1 Thumbnail" />
+          <img src="/assets/project1-thumb.png" alt="Spacious Living project thumbnail" />
           <div class="project-info">
-            <span>Landing Page</span>
-            <span>UI/UX</span>
-            <span>View Project &rarr;</span>
-          </div>
-        </a>
-        
-        <a href="#" class="project-card">
-          <img src="/assets/work2.png" alt="Project 2 Thumbnail" />
-          <div class="project-info">
-            <span>Web App</span>
-            <span>UI/UX</span>
-            <span>View Project &rarr;</span>
+            <span class="tag">Landing Page</span>
+            <span class="tag">UI & Ux</span>
+            <span class="view-link">
+              View Project
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+              </svg>
+            </span>
           </div>
         </a>
 
         <a href="#" class="project-card">
-          <img src="/assets/work3.png" alt="Project 3 Thumbnail" />
+          <img src="/assets/project2-thumb.png" alt="Xpense project thumbnail" />
           <div class="project-info">
-            <span>Mobile App</span>
-            <span>UI/UX</span>
-            <span>View Project &rarr;</span>
+            <span class="tag">Landing Page</span>
+            <span class="tag">UI & Ux</span>
+            <span class="view-link">
+              View Project
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+              </svg>
+            </span>
           </div>
         </a>
-
-        <a href="#" class="project-card">
-          <img src="/assets/work4.png" alt="Project 4 Thumbnail" />
-          <div class="project-info">
-            <span>eCommerce</span>
-            <span>Shopify</span>
-            <span>View Project &rarr;</span>
-          </div>
-        </a>
-
       </div>
     </section>
+
   </main>
 </Layout>
 
 <style>
-  /* Base page padding */
-  .work-page {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    /* We control padding in the sections themselves now */
-    padding: 0 2.5rem; 
-  }
-
-  /* --- 1. Work Hero (Updated) --- */
+  /* ================================== */
+  /* HERO SECTION STYLES (Unchanged)    */
+  /* ================================== */
   .work-hero {
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 6rem 0 1rem 0; /* More top padding, less bottom */
+    padding: 2rem;
+    position: relative;
+    border-bottom: 1px solid var(--border-color); /* Add separator line */
   }
 
   .work-hero h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 500;
-    color: var(--text-color);
-    margin: 0;
+    margin: 0 0 2rem 0;
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
   }
 
-  .hero-icon {
-    padding: 1.5rem 0;
-  }
-  .hero-icon svg {
-    width: 28px;
-    height: 28px;
-    stroke: var(--text-color);
-    opacity: 0.8;
-  }
-
-  /* --- 2. Intro Section (New) --- */
-  .intro-section {
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto; /* Center the text block */
-    padding: 1rem 0 3rem 0; /* Space above and below */
-    border-bottom: 1px solid var(--border-color); /* Separator line */
+  .gradient-text {
+    background: linear-gradient(to bottom, #FFFFFF, #A0A0A0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--light-text-color);
-    margin: 0 auto 1.5rem auto;
-    line-height: 1.6;
-  }
-
-  .current-work-at {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     color: var(--light-text-color);
     margin: 0;
-  }
-  .company-link {
-    color: var(--text-color);
-    font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    transition: color 0.3s;
-  }
-  .company-link:hover {
-    color: #007bff; /* Example hover color */
+    font-weight: 400;
   }
 
+  .scroll-icon {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--light-text-color);
+    opacity: 0.7;
+  }
+  
+  .scroll-icon svg {
+    width: 40px;
+    height: 40px;
+  }
 
-  /* --- 3. Project Grid (Unchanged Styles) --- */
+  /* ================================== */
+  /* PROJECT GRID STYLES                */
+  /* ================================== */
   .project-grid-section {
-    padding: 4rem 0; /* Space below the separator */
+    padding: 6rem 2.5rem; /* Padding for the whole section */
   }
+
+  .project-grid-header {
+    max-width: 600px; /* Limit width of header text */
+    margin-bottom: 4rem;
+  }
+
+  .section-label {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin: 0 0 1rem 0;
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 1.3;
+    margin: 0;
+  }
+
   .project-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
     gap: 2rem;
   }
+
   .project-card {
     display: block;
+    background-color: #222; /* Dark card background */
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    overflow: hidden;
-    background-color: #111;
-    transition: border-color 0.3s ease;
+    overflow: hidden; /* To round the image corners */
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease;
   }
+
   .project-card:hover {
-    border-color: #777;
+    transform: translateY(-5px);
+    border-color: #555;
   }
+
   .project-card img {
     width: 100%;
     height: auto;
     display: block;
-    background-color: #000;
     aspect-ratio: 16 / 10;
     object-fit: cover;
-  }
-  .project-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    background-color: #222; 
-    font-size: 0.9rem;
-    color: var(--light-text-color);
-    border-top: 1px solid var(--border-color);
-  }
-  .project-info span:last-child {
-    color: var(--text-color);
-    font-weight: 500;
+    background-color: #333; /* Placeholder for image */
   }
 
-  /* --- Mobile Styles --- */
+  .project-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .project-info .tag {
+    font-size: 0.85rem; /* Base font size */
+    color: var(--light-text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .project-info .view-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: auto; /* Pushes it to the right */
+  }
+
+  .project-info .view-link svg {
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .view-link svg {
+    transform: translateX(4px);
+  }
+
+
+  /* ================================== */
+  /* MOBILE STYLES (Updated)            */
+  /* ================================== */
   @media (max-width: 768px) {
-    .work-page {
-      padding: 0 1.5rem;
-    }
-    .work-hero {
-      padding: 4rem 0 0.5rem 0;
-    }
     .work-hero h1 {
-      font-size: 2.5rem;
-    }
-    .intro-section {
-      padding: 1rem 0 2rem 0;
+      font-size: 2.8rem;
     }
     .hero-subtitle {
       font-size: 1rem;
     }
+
     .project-grid-section {
-      padding: 3rem 0;
+      padding: 4rem 1.5rem;
     }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
     .project-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      grid-template-columns: 1fr; /* Stack on mobile */
     }
+
+    /* --- FIXES FOR MOBILE TAGS --- */
     .project-info {
-      padding: 0.8rem 1rem;
-      font-size: 0.8rem;
-      flex-wrap: wrap;
+      /* Reduce padding inside the info bar */
+      padding: 0.8rem 1rem; 
+      /* Reduce gap between items */
+      gap: 0.75rem; 
+      /* Allow items to wrap if needed, but we'll try to prevent it with white-space */
+      flex-wrap: wrap; 
+    }
+
+    .project-info .tag {
+      font-size: 0.75rem; /* Make tags slightly smaller */
+      padding: 0.2rem 0.6rem; /* Reduce padding inside tags */
+      line-height: 1; /* Ensure text sits nicely */
+      white-space: nowrap; /* Ensure text stays on one line */
+    }
+
+    .project-info .view-link {
+      font-size: 0.8rem; /* Make view link text smaller */
     }
   }
 </style>

@@ -37,20 +37,20 @@ import Layout from "../layouts/Layout.astro";
           <img src="/assets/rony.png" alt="Rony" class="profile-image" />
         </div>
       </div>
-      <div class="experience-grid">
-        <div class="experience-item">
-          <h4>breakdance</h4>
-          <p>Template Designer - 2022</p>
-        </div>
-        <div class="experience-item">
-          <h4>replo</h4>
-          <p>Product Tester - 2022</p>
-        </div>
-        <div class="experience-item">
-          <h4>SquidX</h4>
-          <p>UI & Web Designer - 2023</p>
-        </div>
+       <dev class="snippets-section">
+      <div class="snippet-item">
+        <p class="snippet-label">Currently Working At</p>
+        <h4 class="snippet-content">Indiahikes</h4>
       </div>
+      <div class="snippet-item">
+        <p class="snippet-label">Interests</p>
+        <h4 class="snippet-content">Photography, Trekking, Web Dev</h4>
+      </div>
+      <div class="snippet-item">
+        <p class="snippet-label">Quote</p>
+        <h4 class="snippet-content">"Design is thinking made visual."</h4>
+      </div>
+    </dev>
     </section>
 
     <section class="skills-section">
@@ -306,21 +306,25 @@ import Layout from "../layouts/Layout.astro";
     background-color: black;
   }
 
-  /* Experience Grid */
+  /* ================================== */
+  /* Experience Grid (MODIFIED)         */
+  /* ================================== */
   .experience-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 0; 
     border-top: 1px solid var(--border-color);
     padding-top: 2rem;
   }
 
   .experience-item {
     padding: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background-color: rgba(26, 26, 26, 0.5);
     text-align: center;
+  }
+
+  /* NEW: Add vertical divider on desktop */
+  .experience-item:not(:last-child) {
+    border-right: 1px solid var(--border-color);
   }
 
   .experience-item h4 {
@@ -346,13 +350,13 @@ import Layout from "../layouts/Layout.astro";
 
     .about-me-header {
       flex-direction: column;
-      align-items: center; /* <-- CHANGED to center */
+      align-items: center; 
       gap: 1rem;
       padding-bottom: 1rem;
     }
 
     .social-links-about {
-      justify-content: center; /* Also center social links */
+      justify-content: center; 
       width: 100%;
     }
 
@@ -381,15 +385,86 @@ import Layout from "../layouts/Layout.astro";
       height: 200px;
     }
 
+    /* MODIFIED: Experience Grid on Mobile */
     .experience-grid {
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 0; 
       padding-top: 1.5rem;
+    }
+
+    /* MODIFIED: Experience Item on Mobile */
+    .experience-item {
+      padding: 1.5rem 0; 
+    }
+
+    /* MODIFIED: Divider rules for mobile */
+    .experience-item:not(:last-child) {
+      border-right: none; 
+      border-bottom: 1px solid var(--border-color); 
     }
   }
 
   /* ================================== */
-  /* SKILLS SECTION STYLES (NOW BOXED)  */
+  /* NEW SNIPPETS SECTION STYLES (Added)*/
+  /* ================================== */
+  .snippets-section {
+    width: 95%;
+    margin: 4rem auto 0; /* Space above the skills section */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+  }
+
+  .snippet-item {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  /* Vertical divider for desktop */
+  .snippet-item:not(:last-child) {
+    border-right: 1px solid var(--border-color);
+  }
+
+  .snippet-label {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.8rem;
+    color: var(--light-text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .snippet-content {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+
+  /* Mobile adjustments for snippets */
+  @media (max-width: 768px) {
+    .snippets-section {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding-top: 1.5rem;
+      margin: 3rem auto 0;
+    }
+
+    .snippet-item {
+      padding: 1.5rem 0;
+    }
+
+    /* Horizontal divider for mobile */
+    .snippet-item:not(:last-child) {
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
+
+  /* ================================== */
+  /* SKILLS SECTION STYLES (Unchanged)  */
   /* ================================== */
   .skills-section {
     width: 95%;
@@ -403,7 +478,6 @@ import Layout from "../layouts/Layout.astro";
     gap: 2rem; 
   }
 
-  /* NEW header for the skills box */
   .skills-header {
     display: flex;
     justify-content: space-between;
@@ -492,12 +566,12 @@ import Layout from "../layouts/Layout.astro";
     
     .skills-header {
       padding-bottom: 1rem;
-      justify-content: center; /* <-- ADDED to center */
+      justify-content: center; 
     }
 
     .skills-main-title {
       font-size: 1.8rem;
-      text-align: center; /* Also center the main title */
+      text-align: center; 
     }
 
     .skills-grid {
