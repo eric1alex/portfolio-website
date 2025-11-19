@@ -1,0 +1,305 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Eric Alex | Formi Case Study">
+  <main class="case-study-page">
+    
+    <section class="project-hero">
+      <div class="hero-content">
+        <p class="project-category">Content & Community</p>
+        <h1 class="project-title">Formi</h1>
+        <p class="project-tagline">Building the voice for AI-driven event automation and community growth.</p>
+      </div>
+    </section>
+
+    <section class="meta-section">
+      <div class="meta-grid">
+        <div class="meta-item">
+          <h3>Role</h3>
+          <p>Content Manager</p>
+        </div>
+        <div class="meta-item">
+          <h3>Timeline</h3>
+          <p>Jul 2023 – Sep 2023</p>
+        </div>
+        <div class="meta-item">
+          <h3>Location</h3>
+          <p>Bangalore, Karnataka</p>
+        </div>
+        <div class="meta-item">
+          <h3>Focus</h3>
+          <p>Brand Growth, Media</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      
+      <div class="content-block">
+        <h2>The Context</h2>
+        <p>
+          Formi is an innovative platform focused on building AI agents to automate complex event operations 
+          like ticketing, payments, and logistics. As Content Manager, my goal was to humanize this technology 
+          and build a loyal community around the brand through storytelling and media.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h2>Strategy & Operations</h2>
+        <div class="bullet-grid">
+          <div class="bullet-card">
+            <h3>Content Strategy</h3>
+            <p>Built a comprehensive content calendar and community engagement strategy, establishing clear branding guidelines to ensure voice consistency.</p>
+          </div>
+          <div class="bullet-card">
+            <h3>Performance Audits</h3>
+            <p>Delivered deep-dive performance audits, setting engagement benchmarks and creating a roadmap for channel optimization.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block highlighted-block">
+        <h2>The Growth Engine: Podcasting</h2>
+        <p class="block-intro">
+          A targeted media campaign to drive awareness and follower growth through long-form and short-form video content.
+        </p>
+        
+        <ul class="detailed-list">
+          <li>
+            <strong>Production at Scale:</strong> Produced and managed 20+ podcast episodes, distributing them across YouTube and repurposing clips for Instagram.
+          </li>
+          <li>
+            <strong>75% Follower Growth:</strong> The consistent, high-quality media output directly resulted in a 75% increase in monthly followers.
+          </li>
+          <li>
+            <strong>Growth Reporting:</strong> Developed channel growth reports to track velocity and engagement, allowing us to double down on high-performing topics.
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h2>Tools & Tech Stack</h2>
+        <div class="tech-tags">
+          <span>YouTube Studio</span>
+          <span>Instagram Insights</span>
+          <span>Notion</span>
+          <span>Premiere/CapCut</span>
+          <span>Google Analytics</span>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="project-footer">
+      <a href="/work" class="back-link">&larr; Back to Work</a>
+    </div>
+
+  </main>
+</Layout>
+
+<style>
+  /* Using the exact same CSS as Tailwebs (Variation 1) for consistency */
+  
+  .case-study-page {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 2.5rem 4rem 2.5rem;
+  }
+
+  /* HERO */
+  .project-hero {
+    padding: 8rem 0 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .project-category {
+    font-size: 0.9rem;
+    color: #FF4444; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
+    color: var(--text-color);
+  }
+
+  .project-tagline {
+    font-size: 1.5rem;
+    color: var(--light-text-color);
+    line-height: 1.4;
+    max-width: 700px;
+  }
+
+  /* METADATA GRID */
+  .meta-section {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .meta-item h3 {
+    font-size: 0.85rem;
+    color: var(--light-text-color);
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .meta-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  /* CONTENT SECTIONS */
+  .content-section {
+    padding-top: 4rem;
+  }
+
+  .content-block {
+    margin-bottom: 5rem;
+  }
+
+  .content-block h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+
+  .content-block p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+  }
+
+  /* BULLET GRID CARDS */
+  .bullet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .bullet-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .bullet-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0 0 1rem 0;
+  }
+
+  .bullet-card p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* HIGHLIGHTED BLOCK */
+  .highlighted-block {
+    background: rgba(255, 255, 255, 0.03); 
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+  }
+
+  .detailed-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .detailed-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--light-text-color);
+  }
+
+  .detailed-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FF4444; 
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+  }
+
+  .detailed-list strong {
+    color: var(--text-color);
+  }
+
+  /* TECH TAGS */
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tech-tags span {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+  }
+
+  /* FOOTER */
+  .project-footer {
+    margin-top: 6rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .back-link {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .back-link:hover {
+    color: #FF4444;
+  }
+
+  /* MOBILE STYLES */
+  @media (max-width: 768px) {
+    .project-hero {
+      padding: 6rem 0 3rem 0;
+    }
+    .project-title {
+      font-size: 2.5rem;
+    }
+    .project-tagline {
+      font-size: 1.2rem;
+    }
+    .meta-grid {
+      grid-template-columns: 1fr 1fr; 
+      gap: 1.5rem;
+    }
+    .bullet-grid {
+      grid-template-columns: 1fr;
+    }
+    .highlighted-block {
+      padding: 1.5rem;
+    }
+  }
+</style>

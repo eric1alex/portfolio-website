@@ -1,0 +1,312 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Eric Alex | Tailwebs Case Study">
+  <main class="case-study-page">
+    
+    <section class="project-hero">
+      <div class="hero-content">
+        <p class="project-category">Business Development & Marketing</p>
+        <h1 class="project-title">Tailwebs Technology</h1>
+        <p class="project-tagline">Driving growth and launching internal SaaS products for a premier software firm.</p>
+      </div>
+    </section>
+
+    <section class="meta-section">
+      <div class="meta-grid">
+        <div class="meta-item">
+          <h3>Role</h3>
+          <p>Business Development Executive</p>
+        </div>
+        <div class="meta-item">
+          <h3>Timeline</h3>
+          <p>Jun. 2024 – Present</p>
+        </div>
+        <div class="meta-item">
+          <h3>Location</h3>
+          <p>Bangalore, Karnataka</p>
+        </div>
+        <div class="meta-item">
+          <h3>Focus</h3>
+          <p>B2B Sales, SaaS GTM</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      
+      <div class="content-block">
+        <h2>The Context</h2>
+        <p>
+          Tailwebs Technology Pvt. Ltd. is a Bengaluru-based software development firm known for creating 
+          innovative web and mobile applications tailored to various sectors. My role involves a hybrid focus: 
+          driving core agency business while simultaneously managing the Go-To-Market strategy for 
+          ShopAR, an internal SaaS product.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h2>Core Business Development</h2>
+        <div class="bullet-grid">
+          <div class="bullet-card">
+            <h3>Outbound Strategy</h3>
+            <p>Executed outbound campaigns using LinkedIn and email; analyzed performance data to optimize targeting, cadence, and messaging.</p>
+          </div>
+          <div class="bullet-card">
+            <h3>Pipeline Management</h3>
+            <p>Managed CRM workflows (Zoho, HubSpot) and marketing automation tools to streamline the sales pipeline and improve lead conversion rates.</p>
+          </div>
+          <div class="bullet-card">
+            <h3>A/B Testing</h3>
+            <p>Created A/B test variations for cold email subject lines and copy, successfully improving open and reply rates across campaigns.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-block highlighted-block">
+        <h2>Product Launch: ShopAR</h2>
+        <p class="block-intro">
+          Leading the GTM activities for the internal SaaS product, focusing on end-to-end acquisition and retention.
+        </p>
+        
+        <ul class="detailed-list">
+          <li>
+            <strong>Go-To-Market Execution:</strong> Drove end-to-end GTM activities including email marketing, content distribution, and audience segmentation.
+          </li>
+          <li>
+            <strong>Brand & Asset Development:</strong> Developed brand messaging, landing pages, and automated email sequences to nurture leads.
+          </li>
+          <li>
+            <strong>Data-Driven Strategy:</strong> Tracked product usage and campaign data using Mixpanel, GA4, and Metabase to inform content, retention, and conversion strategy.
+          </li>
+          <li>
+            <strong>Sales Enablement:</strong> Created sales enablement material and ran structured feedback loops to iterate on messaging based on demo objections.
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h2>Tools & Tech Stack</h2>
+        <div class="tech-tags">
+          <span>Zoho CRM</span>
+          <span>HubSpot</span>
+          <span>Mixpanel</span>
+          <span>GA4</span>
+          <span>Metabase</span>
+          <span>LinkedIn Sales Nav</span>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="project-footer">
+      <a href="/projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+  </main>
+</Layout>
+
+<style>
+  .case-study-page {
+    width: 100%;
+    max-width: 1200px; /* Reading width */
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem 1.5rem;
+  }
+
+  /* HERO */
+  .project-hero {
+    padding: 8rem 0 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .project-category {
+    font-size: 0.9rem;
+    color: #FF4444; /* Using your accent red */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
+    color: var(--text-color);
+  }
+
+  .project-tagline {
+    font-size: 1.5rem;
+    color: var(--light-text-color);
+    line-height: 1.4;
+    max-width: 700px;
+  }
+
+  /* METADATA GRID */
+  .meta-section {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .meta-item h3 {
+    font-size: 0.85rem;
+    color: var(--light-text-color);
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .meta-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  /* CONTENT SECTIONS */
+  .content-section {
+    padding-top: 4rem;
+  }
+
+  .content-block {
+    margin-bottom: 5rem;
+  }
+
+  .content-block h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+
+  .content-block p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+  }
+
+  /* BULLET GRID CARDS */
+  .bullet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .bullet-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .bullet-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0 0 1rem 0;
+  }
+
+  .bullet-card p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* HIGHLIGHTED BLOCK (ShopAR) */
+  .highlighted-block {
+    background: rgba(255, 255, 255, 0.03); /* Very subtle bg */
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+  }
+
+  .detailed-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .detailed-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--light-text-color);
+  }
+
+  .detailed-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FF4444; /* Red bullet point */
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+  }
+
+  .detailed-list strong {
+    color: var(--text-color);
+  }
+
+  /* TECH TAGS */
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tech-tags span {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+  }
+
+  /* FOOTER */
+  .project-footer {
+    margin-top: 6rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .back-link {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .back-link:hover {
+    color: #FF4444;
+  }
+
+  /* MOBILE STYLES */
+  @media (max-width: 768px) {
+    .project-hero {
+      padding: 6rem 0 3rem 0;
+    }
+    .project-title {
+      font-size: 2.5rem;
+    }
+    .project-tagline {
+      font-size: 1.2rem;
+    }
+    .meta-grid {
+      grid-template-columns: 1fr 1fr; /* 2x2 on mobile */
+      gap: 1.5rem;
+    }
+    .bullet-grid {
+      grid-template-columns: 1fr;
+    }
+    .highlighted-block {
+      padding: 1.5rem;
+    }
+  }
+</style>

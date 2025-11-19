@@ -1,0 +1,361 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Eric Alex | PrintsLoft">
+  <main class="creative-page">
+    
+    <section class="moodboard-hero">
+      
+      <div class="floating-card left-card">
+        <img src="/assets/prints-1.jpg" alt="Paris Print" />
+      </div>
+
+      <div class="hero-center">
+        <span class="brand-tag">E-Commerce & Art</span>
+        <h1 class="hero-title">PrintsLoft</h1>
+        <p class="hero-subtitle">
+          Turning breathtaking travel moments into premium, hand-shot prints. 
+          Bringing the world’s most iconic destinations into your home.
+        </p>
+        <div class="hero-meta">
+          <span>Founder & Creator</span>
+          <span class="separator">•</span>
+          <span>D2C Brand</span>
+        </div>
+      </div>
+
+      <div class="floating-card right-card">
+        <img src="/assets/prints-2.jpg" alt="Kyoto Print" />
+      </div>
+
+    </section>
+
+    <section class="mission-section">
+      <div class="mission-visual">
+        <img src="/assets/prints-3.jpg" alt="Prints on wall" class="feature-img" />
+      </div>
+      <div class="mission-text">
+        <h2>Transforming Memories into Art</h2>
+        <p>
+          I founded PrintsLoft with a singular mission: to curate the nostalgia of travel. 
+          It isn't just about selling photos; it's about capturing the feeling of a Parisian morning 
+          or a sunset in Santorini and designing it as a premium art piece for modern interiors.
+        </p>
+        <a href="https://instagram.com/PrintsLoft" target="_blank" class="social-link">
+          Visit Shop on Instagram &rarr;
+        </a>
+      </div>
+    </section>
+
+    <section class="collection-section">
+      <div class="section-header">
+        <h2>The Collection</h2>
+        <p>Curated, Limited, Story-Driven.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="img-frame">
+            <img src="/assets/prints-4.jpg" alt="Limited Edition" />
+          </div>
+          <h3>Limited-Edition</h3>
+          <p>Every piece is an original, personally captured and edited. Quality over quantity.</p>
+        </div>
+
+        <div class="gallery-item down-shifted"> <div class="img-frame">
+            <img src="/assets/prints-5.jpg" alt="Curated Destinations" />
+          </div>
+          <h3>Curated Destinations</h3>
+          <p>Iconic locations like Paris, Santorini, and Kyoto, styled for aesthetic beauty.</p>
+        </div>
+
+        <div class="gallery-item">
+          <div class="img-frame">
+            <img src="/assets/prints-6.jpg" alt="Story Driven" />
+          </div>
+          <h3>Story-Driven Art</h3>
+          <p>Designed to evoke travel nostalgia and bring warmth to a space.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap-section">
+      <div class="roadmap-container">
+        <h2 class="roadmap-title">What I’m Building</h2>
+        
+        <div class="roadmap-list">
+          <div class="roadmap-step">
+            <span class="step-num">01</span>
+            <div class="step-content">
+              <h4>Phase 1: Launch</h4>
+              <p>Launching with A5-sized premium travel prints to test market fit and accessibility.</p>
+            </div>
+          </div>
+          
+          <div class="roadmap-step">
+            <span class="step-num">02</span>
+            <div class="step-content">
+              <h4>Phase 2: Expansion</h4>
+              <p>Scaling into larger formats, exclusive framed collections, and new ways to bring memories to life.</p>
+            </div>
+          </div>
+          
+          <div class="roadmap-step">
+            <span class="step-num">03</span>
+            <div class="step-content">
+              <h4>Community Growth</h4>
+              <p>Building a global audience on Instagram & Pinterest through aesthetic storytelling.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="page-footer">
+      <a href="/projects" class="back-link">&larr; Back to Projects</a>
+    </div>
+
+  </main>
+</Layout>
+
+<style>
+  .creative-page {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll from tilted images */
+  }
+
+  /* --- 1. MOODBOARD HERO --- */
+  .moodboard-hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 4rem 2rem;
+  }
+
+  .hero-center {
+    text-align: center;
+    max-width: 600px;
+    z-index: 2; /* On top of images */
+    position: relative;
+  }
+
+  .brand-tag {
+    font-size: 0.9rem;
+    color: #FF4444;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid rgba(255, 68, 68, 0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+  }
+
+  .hero-title {
+    font-size: 5rem;
+    margin: 1.5rem 0;
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--light-text-color);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .hero-meta {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  .separator { margin: 0 0.5rem; color: var(--border-color); }
+
+  /* FLOATING CARDS */
+  .floating-card {
+    position: absolute;
+    z-index: 1;
+    transition: transform 0.5s ease;
+  }
+  
+  .floating-card img {
+    width: 280px;
+    height: auto;
+    border: 8px solid #fff; /* White photo border */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transform: rotate(-5deg);
+  }
+
+  .left-card {
+    top: 15%;
+    left: 10%;
+  }
+  
+  .right-card {
+    bottom: 15%;
+    right: 10%;
+  }
+  
+  .right-card img {
+    transform: rotate(8deg);
+    width: 320px;
+  }
+
+  .moodboard-hero:hover .left-card { transform: translateY(-20px) rotate(-8deg); }
+  .moodboard-hero:hover .right-card { transform: translateY(-20px) rotate(10deg); }
+
+
+  /* --- 2. MISSION SECTION --- */
+  .mission-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+  }
+
+  .feature-img {
+    width: 100%;
+    border-radius: 4px;
+    opacity: 0.9;
+  }
+
+  .mission-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mission-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--light-text-color);
+    margin-bottom: 2rem;
+  }
+
+  .social-link {
+    font-size: 1.1rem;
+    color: #FF4444;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s;
+  }
+  .social-link:hover { border-bottom-color: #FF4444; }
+
+
+  /* --- 3. COLLECTION SECTION --- */
+  .collection-section {
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .section-header h2 { font-size: 3rem; margin: 0 0 0.5rem 0; }
+  .section-header p { color: var(--light-text-color); }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    text-align: center;
+  }
+
+  /* Stagger the middle item down */
+  .down-shifted {
+    margin-top: 4rem; 
+  }
+
+  .img-frame {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .img-frame img {
+    width: 100%;
+    height: 400px; /* Fixed height for alignment */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: grayscale(20%);
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+  }
+
+  .gallery-item h3 { font-size: 1.4rem; margin: 0 0 0.5rem 0; }
+  .gallery-item p { color: var(--light-text-color); line-height: 1.5; }
+
+
+  /* --- 4. ROADMAP SECTION --- */
+  .roadmap-section {
+    background-color: #111; /* Slightly lighter background */
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .roadmap-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .roadmap-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .roadmap-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px dashed var(--border-color);
+  }
+  .roadmap-step:last-child { border: none; margin: 0; padding: 0; }
+
+  .step-num {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FF4444;
+    font-family: monospace;
+  }
+
+  .step-content h4 { margin: 0 0 0.5rem 0; font-size: 1.4rem; }
+  .step-content p { margin: 0; color: var(--light-text-color); line-height: 1.6; }
+
+  /* Footer */
+  .page-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .back-link { color: var(--light-text-color); text-decoration: none; }
+  .back-link:hover { color: #fff; }
+
+
+  /* --- MOBILE --- */
+  @media (max-width: 1024px) {
+    .floating-card { display: none; } /* Hide floating images on tablet/mobile */
+    .hero-title { font-size: 3.5rem; }
+    .mission-section { grid-template-columns: 1fr; gap: 2rem; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .down-shifted { margin-top: 0; } /* Remove stagger on mobile */
+    .img-frame img { height: auto; aspect-ratio: 4/5; }
+  }
+</style>
