@@ -5,11 +5,15 @@ import Layout from "../layouts/Layout.astro";
 // Just add the paths to your images here.
 // Make sure to put your images in the `public/assets/photos/` folder.
 const photos = [
-  { id: "img1", src: "/assets/hero1.png", alt: "Description of photo 1" },
-  { id: "img2", src: "/assets/hero2.png", alt: "Description of photo 1" },
-  { id: "img3", src: "/assets/mobile1.jpg", alt: "Description of photo 1" },
-  { id: "img4", src: "/assets/hero1.png", alt: "Description of photo 1" },
-  { id: "img5", src: "/assets/mobile1.jpg", alt: "Description of photo 1" },
+  { id: "img1", src: "/assets/img1.jpg", alt: "Description of photo 1" },
+  { id: "img2", src: "/assets/img2.jpg", alt: "Description of photo 1" },
+  { id: "img3", src: "/assets/img3.jpg", alt: "Description of photo 1" },
+  { id: "img4", src: "/assets/img4.jpg", alt: "Description of photo 1" },
+  { id: "img5", src: "/assets/img5.jpg", alt: "Description of photo 1" },
+  { id: "img6", src: "/assets/img6.jpg", alt: "Description of photo 1" },
+  { id: "img7", src: "/assets/img7.jpg", alt: "Description of photo 1" },
+  { id: "img8", src: "/assets/img8.jpg", alt: "Description of photo 1" },
+  { id: "img9", src: "/assets/img9.jpg", alt: "Description of photo 1" },
 ];
 ---
 
@@ -71,7 +75,7 @@ const photos = [
   /* ================================== */
   .photo-grid {
     /* This creates the masonry effect */
-    column-count: 3;
+    column-count: 4;
     column-gap: 1.5rem;
   }
 

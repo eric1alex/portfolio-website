@@ -4,24 +4,29 @@ import Layout from "../layouts/Layout.astro";
 // --- YOUR VIDEOS ---
 const videos = [
   {
-    videoId: "Nlt6M7iIpbk", // Example: Indiahikes Kedarkantha
-    title: "Kedarkantha Trek Story",
-    description: "A short film capturing the essence of the Kedarkantha trek."
+    videoId: "Nlt6M7iIpbk",
+    title: "Silly - Short Film",
+    description: "A short film on the topic My Mental Health, My Right."
   },
   {
-    videoId: "mCt_TxJVFNs", // Example: Indiahikes Buran Ghati
-    title: "Buran Ghati Trek",
-    description: "Experiencing the dramatic pass crossing in the Himalayas."
+    videoId: "mCt_TxJVFNs",
+    title: "Varkala Travel Film",
+    description: "Experience Varkala in this film."
   },
   {
-    videoId: "O5oEgv84-3k", // Example: Travel Video
-    title: "Visions of Goa",
-    description: "A cinematic look at the sights and sounds of Goa."
+    videoId: "e3C1h3oJyIw",
+    title: "Class Graduation Video - SJCC",
+    description: "A heartfelt tribute video to shared memories."
   },
   {
-    videoId: "m-j8gD0-xJk", // Example: F1 Short
-    title: "Monaco GP Highlights",
-    description: "Action and drama from the iconic street circuit."
+    videoId: "K8W96wbsyuk",
+    title: "Underground 9 - Cinematic Video",
+    description: "The Pune Car Meet like never seen before."
+  },
+  {
+    videoId: "-Y6ULrh2liA",
+    title: "Coca-Cola Broll",
+    description: "A short Coca Cola product video."
   },
 ];
 ---
@@ -54,6 +59,15 @@ const videos = [
         </div>
       ))}
     </div>
+
+    <div class="youtube-cta-section">
+      <p class="cta-text">If you like what you see, don't forget to subscribe.</p>
+      
+      <a href="https://www.youtube.com/@eric10alex" target="_blank" rel="noopener noreferrer" class="cta-button">
+        Visit YouTube Channel &rarr;
+      </a>
+    </div>
+
   </main>
 </Layout>
 
@@ -62,7 +76,7 @@ const videos = [
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 0; /* Adjusted padding, the bottom will be handled by the cta section */
   }
 
   .page-header {
@@ -118,7 +132,7 @@ const videos = [
   }
 
   /* ================================== */
-  /* LITE VIDEO EMBED (FIXED)           */
+  /* LITE VIDEO EMBED                   */
   /* ================================== */
   .lite-video {
     position: relative;
@@ -164,12 +178,9 @@ const videos = [
   .play-button svg {
     width: 32px;
     height: 32px;
-    margin-left: 4px; /* Optically center the play icon */
+    margin-left: 4px; 
   }
 
-  /* This style is still good to have as a fallback,
-    but we will also set it in the JS.
-  */
   .lite-video iframe {
     position: absolute;
     top: 0;
@@ -179,13 +190,50 @@ const videos = [
     border: none;
   }
 
+  /* ================================== */
+  /* UPDATED YOUTUBE CTA STYLES         */
+  /* ================================== */
+  .youtube-cta-section {
+    text-align: center;
+    margin-top: 8rem; /* Increased top margin for separation */
+    padding: 4rem 0; /* Added more padding */
+    background-color: #111; /* Subtle background change */
+    border-radius: 10px; /* Slight roundness to match cards */
+    max-width: 800px; /* Constrain width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+    color: var(--light-text-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 2rem;
+    border-radius: 30px; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-color: var(--text-color);
+  }
 
   /* ================================== */
   /* MOBILE STYLES                      */
   /* ================================== */
   @media (max-width: 768px) {
     .video-grid {
-      grid-template-columns: 1fr; /* 1 column on mobile */
+      grid-template-columns: 1fr; 
       gap: 2rem;
     }
     
@@ -195,6 +243,11 @@ const videos = [
     
     .page-header {
       padding: 1rem 0 3rem 0;
+    }
+
+    .youtube-cta-section {
+      margin-top: 5rem;
+      padding: 3rem 1rem;
     }
   }
 </style>
@@ -213,16 +266,12 @@ const videos = [
         iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
         iframe.setAttribute('allowfullscreen', 'true');
         
-        // --- THIS IS THE FIX ---
-        // We add the styles directly to the iframe
-        // to ensure it fills the 16:9 container.
         iframe.style.position = 'absolute';
         iframe.style.top = '0';
         iframe.style.left = '0';
         iframe.style.width = '100%';
         iframe.style.height = '100%';
         iframe.style.border = 'none';
-        // --- END OF FIX ---
         
         video.innerHTML = '';
         video.appendChild(iframe);
