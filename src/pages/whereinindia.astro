@@ -1,0 +1,415 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const images = {
+  hero: "/assets/wii.png",
+  process: "/assets/wii.png",
+  mobile: "/assets/wii.png",
+  features: "/assets/wii.png"
+};
+---
+
+<Layout title="Where In India | Case Study">
+  <main class="case-study">
+    
+    <section class="cs-hero">
+      <div class="container">
+        <div class="hero-grid">
+            <div class="hero-header">
+                <div class="meta-tags">
+                    <span>Web Development</span>
+                    <span class="separator">•</span>
+                    <span>Community</span>
+                </div>
+                <h1>Where In India</h1>
+                <p class="hero-lead">A community-built travel directory prioritizing human originality over AI algorithms.</p>
+                
+                <a href="https://whereinindia.com" target="_blank" rel="noopener noreferrer" class="hero-btn">
+                    Visit Live Site <span class="btn-icon">↗</span>
+                </a>
+            </div>
+            
+            <div class="hero-image-frame">
+                <img src={images.hero} alt="Where In India Interface" />
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="val">900+</span>
+                    <span class="lbl">Users (90 Days)</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">80+</span>
+                    <span class="lbl">Returning</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">45%</span>
+                    <span class="lbl">Engagement</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">15+</span>
+                    <span class="lbl">Feedbacks</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+      <div class="container">
+        
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">01</div>
+                <h2>The Spark</h2>
+                <p>The story started when I was planning a trip to Pondicherry. I wanted a simple site that showed places to visit. Google gave me clutter—too much text, too many ads, and buried information.</p>
+                <p>The idea rose: <strong>Why not build a directory that just links places to Google Maps?</strong> Simple, direct, and exactly what travelers need for navigation.</p>
+            </div>
+            <div class="chapter-media">
+                <img src={images.hero} alt="The Idea Spark" /> 
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">02</div>
+                <h2>Community Over AI</h2>
+                <p>With the AI boom, the internet felt flooded with robotic content. We realized people craved originality. I didn't want to build just another AI-generated list.</p>
+                <p>The pivot: <strong>Make it community-built.</strong> I spent 2 weeks reaching out on Reddit, gathering authentic recommendations for 5-6 cities before writing a single line of code.</p>
+            </div>
+            <div class="chapter-media">
+                <img src={images.process} alt="Community Gathering Process" />
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">03</div>
+                <h2>Execution & Growth</h2>
+                <p>I designed and built the website solo, focusing on a "zero friction" user experience. No complex sign-ups, no fancy animations—just instant utility, built for speed. It had to work perfectly on mobile for on-the-go travelers.</p>
+                <p>Marketing was entirely organic. I engaged deeply in travel itinerary threads on Reddit, offering genuine help. Once users realized it wasn't another "AI farm" but a human-curated effort, sentiment flipped.</p>
+            </div>
+            <div class="chapter-media">
+                <img src={images.mobile} alt="Mobile View Execution" />
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-label">System Features</h2>
+        <div class="bento-grid">
+            <div class="bento-item"><h3>Search System</h3><p>Instant, seamless search for cities, specific places, and categories without page reloads.</p></div>
+            <div class="bento-item"><h3>Place Pages</h3><p>Minimalist pages showing only essentials: Description, accurate Images, and key Details.</p></div>
+            <div class="bento-item"><h3>User Contributions</h3><p>A validated submission form allowing locals to easily recommend their favorite hidden spots.</p></div>
+            <div class="bento-item"><h3>Map Integration</h3><p>Every location links directly to its exact Google Maps coordinate for one-click navigation.</p></div>
+            <div class="bento-item"><h3>Travel Stories</h3><p>A dedicated blog-like section for users to share deeper narratives and itineraries with images.</p></div>
+            <div class="bento-item"><h3>Feedback Loop</h3><p>Integrated mechanism allowing users to quickly report inaccuracies, keeping data fresh.</p></div>
+        </div>
+        <div class="feature-big-img"><img src={images.features} alt="Features Overview" /></div>
+      </div>
+    </section>
+
+    <section class="nav-footer">
+        <a href="/" class="back-btn">Back to Home</a>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  /* --- LAYOUT RESET --- */
+  .case-study {
+    background-color: #0A0A0A;
+    color: #EDEDED;
+    padding-top: 6rem;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* --- HERO --- */
+  .cs-hero { margin-bottom: 4rem; }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; 
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-header { padding-right: 1rem; }
+
+  .meta-tags {
+    font-family: monospace;
+    color: #B176F2;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .separator { color: #444; }
+
+  .hero-header h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -1.5px;
+    color: #fff;
+  }
+
+  .hero-lead {
+    font-size: 1.15rem;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+  }
+
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+  }
+
+  .hero-btn:hover {
+    background-color: #B176F2;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .hero-image-frame {
+    width: 100%; 
+    border: 1px solid #2a2a2a;
+    padding: 8px;
+    background: #111;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+
+  /* --- STATS STRIP --- */
+  .stats-strip {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    background: #0F0F0F;
+    margin-bottom: 6rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stat-box {
+    padding: 2rem 1rem;
+    border-right: 1px solid #222;
+    text-align: center;
+  }
+  .stat-box:last-child { border-right: none; }
+
+  .stat-box .val {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-box .lbl {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  /* --- STORY CHAPTERS --- */
+  .story-section { margin-bottom: 8rem; }
+
+  .chapter {
+    display: grid;
+    /* 1fr for text, 450px fixed for image column */
+    grid-template-columns: 1fr 450px;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #222;
+    align-items: start; 
+  }
+  .chapter:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .chapter-text {
+    position: relative;
+    padding-left: 4rem; 
+    padding-right: 2rem; 
+  }
+
+  .chapter-idx {
+    position: absolute;
+    left: 0;
+    top: 4px; 
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+  }
+
+  .chapter-text h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.2;
+  }
+
+  .chapter-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #A0A0A0;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Standardized Image Container (16:9) */
+  .chapter-media {
+    width: 100%;
+    /* Replaced fixed height with aspect-ratio for perfect 16:9 */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 1px solid #222;
+    padding: 5px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .chapter-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* --- FEATURES BENTO --- */
+  .features-section { margin-bottom: 8rem; }
+
+  .section-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 1rem;
+    display: block;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .bento-item {
+    background: #111;
+    border: 1px solid #222;
+    padding: 2rem;
+    transition: border-color 0.3s;
+  }
+  .bento-item:hover { border-color: #444; }
+
+  .bento-item h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .bento-item p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .feature-big-img { border: 1px solid #222; }
+
+  /* --- NAV FOOTER --- */
+  .nav-footer {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid #222;
+  }
+
+  .back-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    padding-bottom: 4px;
+    transition: all 0.3s;
+  }
+  .back-btn:hover { border-color: #B176F2; color: #B176F2; }
+
+  /* --- MOBILE --- */
+  @media (max-width: 900px) {
+    .hero-grid, .chapter {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .hero-image-frame { order: -1; }
+    
+    /* On mobile, text on top, image below */
+    .chapter-media { 
+        width: 100%; /* Ensure full width on mobile */
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+    .chapter-text { 
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1rem; 
+    }
+    .chapter-idx {
+        position: relative; 
+        margin-bottom: 0.5rem;
+        display: block;
+        top: 0;
+    }
+    
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .stat-box:nth-child(2) { border-right: none; }
+    .stat-box { border-bottom: 1px solid #222; }
+    .stat-box:nth-last-child(-n+2) { border-bottom: none; }
+  }
+</style>
