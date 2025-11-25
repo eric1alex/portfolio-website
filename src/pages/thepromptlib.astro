@@ -1,0 +1,454 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const images = {
+  hero: "/assets/tpl-hero.png",
+  challenge: "/assets/tpl-challenge.png", // Visual of chaotic notes or chat history
+  solution: "/assets/tpl-solution.png",   // Visual of the UI or a template card
+  features: "/assets/tpl-features.png"
+};
+---
+
+<Layout title="The Prompt Lib | Project Case Study">
+  <main class="case-study">
+    
+    <section class="cs-hero">
+      <div class="container">
+        <div class="hero-grid">
+            <div class="hero-header">
+                <div class="meta-tags">
+                    <span>SaaS Product</span>
+                    <span class="separator">•</span>
+                    <span>AI Workflow</span>
+                </div>
+                <h1>The Prompt Lib</h1>
+                <p class="hero-lead">The operating system for professional AI workflows. Turning scattered text into repeatable, professional assets.</p>
+                
+                <div class="tech-stack-row">
+                    <span class="tech-pill">Product Strategy</span>
+                    <span class="tech-pill">GTM Strategy</span>
+                    <span class="tech-pill">User Research</span>
+                </div>
+
+                <a href="#" class="hero-btn">
+                    View Beta Access <span class="btn-icon">↗</span>
+                </a>
+            </div>
+            
+            <div class="hero-image-frame">
+                <img src={images.hero} alt="The Prompt Lib Dashboard" />
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="val">45+</span>
+                    <span class="lbl">Beta Users</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">$0</span>
+                    <span class="lbl">Ad Spend (Organic)</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">High</span>
+                    <span class="lbl">Retention Rate</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">Phase 2</span>
+                    <span class="lbl">Current Status</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+      <div class="container">
+        
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">01</div>
+                <h2>The Challenge</h2>
+                <p>For marketing agencies, the rise of Generative AI brought a new kind of chaos. While tools like ChatGPT are powerful, the workflows surrounding them were broken. We identified a recurring pain point across the industry: <strong>"Prompt Amnesia."</strong></p>
+                <p>Effective prompts were being lost in chat histories or scattered across tools. Teams struggled to maintain a consistent brand voice, often rewriting instructions from scratch. There was no "single source of truth" for high-value AI instructions.</p>
+            </div>
+            <div class="chapter-media">
+                <img src={images.challenge} alt="The Challenge of Prompt Amnesia" /> 
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">02</div>
+                <h2>The Solution</h2>
+                <p>We built a centralized prompt management system designed to treat prompts like software code—with version control and strict rules—wrapped in a user-friendly interface.</p>
+                <p>The core philosophy is <strong>"Don't rewrite; fill in the blanks."</strong> Users create Master Instruction Cards, and the system dynamically injects specific context (variables) while enforcing brand guidelines. It balances technical power with UI simplicity, ensuring output consistency regardless of who runs the prompt.</p>
+            </div>
+            <div class="chapter-media">
+                <img src={images.solution} alt="Master Instruction Cards UI" />
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">03</div>
+                <h2>Growth & Impact</h2>
+                <p>While my co-founder engineered the backend, I spearheaded product definition and go-to-market strategy. I orchestrated a closed Beta launch, acquiring ~45 active users with <strong>zero paid spend</strong> through targeted user research and outreach.</p>
+                <p>The results validated the need: Agencies reported a drastic reduction in time spent rewriting instructions and successfully eliminated "drift" in AI outputs. We are now preparing for Beta Phase 2, utilizing feedback loops to stress-test new collaboration features.</p>
+            </div>
+            <div class="chapter-media">
+                <img src={images.hero} alt="Growth Results" />
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-label">Key Innovations</h2>
+        <div class="bento-grid">
+            <div class="bento-item">
+                <h3>Dynamic Variables</h3>
+                <p>Users build "Fill-in-the-blank" templates, ensuring structure remains perfect while context changes.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Rule Engine</h3>
+                <p>Automatically appends and checks for tone, style, and formatting rules to enforce consistency.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Team Collaboration</h3>
+                <p>Shared workspaces allow agencies to onboard team members to a "best practices" library instantly.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Version Control</h3>
+                <p>Treating prompts like code allows teams to rollback changes and iterate safely.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Brand Guardrails</h3>
+                <p>Eliminates "drift" in AI outputs by maintaining a uniform voice across different clients.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Master Templates</h3>
+                <p>A central repository that serves as the single source of truth for high-value instructions.</p>
+            </div>
+        </div>
+        <div class="feature-big-img">
+            <img src={images.features} alt="Features Overview" />
+        </div>
+      </div>
+    </section>
+
+    <section class="nav-footer">
+        <a href="/projects" class="back-btn">Back to Home</a>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  /* --- LAYOUT RESET --- */
+  .case-study {
+    background-color: #0A0A0A;
+    color: #EDEDED;
+    padding-top: 6rem;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* --- HERO --- */
+  .cs-hero { margin-bottom: 4rem; }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; 
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-header { padding-right: 1rem; }
+
+  .meta-tags {
+    font-family: monospace;
+    color: #B176F2;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .separator { color: #444; }
+
+  .hero-header h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -1.5px;
+    color: #fff;
+  }
+
+  .hero-lead {
+    font-size: 1.15rem;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+
+  /* Tech Pills Style */
+  .tech-stack-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tech-pill {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #888;
+    background: #111;
+  }
+
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+  }
+
+  .hero-btn:hover {
+    background-color: #B176F2;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .hero-image-frame {
+    width: 100%; 
+    border: 1px solid #2a2a2a;
+    padding: 8px;
+    background: #111;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+
+  /* --- STATS STRIP --- */
+  .stats-strip {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    background: #0F0F0F;
+    margin-bottom: 6rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stat-box {
+    padding: 2rem 1rem;
+    border-right: 1px solid #222;
+    text-align: center;
+  }
+  .stat-box:last-child { border-right: none; }
+
+  .stat-box .val {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-box .lbl {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  /* --- STORY CHAPTERS --- */
+  .story-section { margin-bottom: 8rem; }
+
+  .chapter {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #222;
+    align-items: start; 
+  }
+  .chapter:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .chapter-text {
+    position: relative;
+    padding-left: 4rem; 
+    padding-right: 2rem; 
+  }
+
+  .chapter-idx {
+    position: absolute;
+    left: 0;
+    top: 4px; 
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+  }
+
+  .chapter-text h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.2;
+  }
+
+  .chapter-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #A0A0A0;
+    margin-bottom: 1.5rem;
+  }
+
+  .chapter-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 1px solid #222;
+    padding: 5px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .chapter-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* --- FEATURES BENTO --- */
+  .features-section { margin-bottom: 8rem; }
+
+  .section-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 1rem;
+    display: block;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .bento-item {
+    background: #111;
+    border: 1px solid #222;
+    padding: 2rem;
+    transition: border-color 0.3s;
+  }
+  .bento-item:hover { border-color: #444; }
+
+  .bento-item h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .bento-item p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .feature-big-img { border: 1px solid #222; }
+
+  /* --- NAV FOOTER --- */
+  .nav-footer {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid #222;
+  }
+
+  .back-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    padding-bottom: 4px;
+    transition: all 0.3s;
+  }
+  .back-btn:hover { border-color: #B176F2; color: #B176F2; }
+
+  /* --- MOBILE --- */
+  @media (max-width: 900px) {
+    .hero-grid, .chapter {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .hero-image-frame { order: -1; }
+    
+    .chapter-media { 
+        width: 100%; 
+        height: auto; 
+        aspect-ratio: 16/9;
+    }
+    .chapter-text { 
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1rem; 
+    }
+    .chapter-idx {
+        position: relative; 
+        margin-bottom: 0.5rem;
+        display: block;
+        top: 0;
+    }
+    
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .stat-box:nth-child(2) { border-right: none; }
+    .stat-box { border-bottom: 1px solid #222; }
+    .stat-box:nth-last-child(-n+2) { border-bottom: none; }
+  }
+</style>

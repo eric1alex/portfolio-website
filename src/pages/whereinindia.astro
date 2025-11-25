@@ -19,11 +19,19 @@ const images = {
                 <div class="meta-tags">
                     <span>Web Development</span>
                     <span class="separator">•</span>
+                    <span>Growth</span>
+                    <span class="separator">•</span>
                     <span>Community</span>
                 </div>
                 <h1>Where In India</h1>
-                <p class="hero-lead">A community-built travel directory prioritizing human originality over AI algorithms.</p>
+                <p class="hero-lead">Simplifying travel discovery through community & speed. The antidote to content-heavy travel blogs.</p>
                 
+                <div class="tech-stack-row">
+                    <span class="tech-pill">Astro</span>
+                    <span class="tech-pill">Google Analytics</span>
+                    <span class="tech-pill">Reddit Marketing</span>
+                </div>
+
                 <a href="https://whereinindia.com" target="_blank" rel="noopener noreferrer" class="hero-btn">
                     Visit Live Site <span class="btn-icon">↗</span>
                 </a>
@@ -41,19 +49,19 @@ const images = {
             <div class="stats-grid">
                 <div class="stat-box">
                     <span class="val">900+</span>
-                    <span class="lbl">Users (90 Days)</span>
+                    <span class="lbl">Users (28 Days)</span>
                 </div>
                 <div class="stat-box">
-                    <span class="val">80+</span>
-                    <span class="lbl">Returning</span>
+                    <span class="val">90+</span>
+                    <span class="lbl">Returning Users</span>
                 </div>
                 <div class="stat-box">
-                    <span class="val">45%</span>
-                    <span class="lbl">Engagement</span>
+                    <span class="val">50%</span>
+                    <span class="lbl">Engagement Rate</span>
                 </div>
                 <div class="stat-box">
-                    <span class="val">15+</span>
-                    <span class="lbl">Feedbacks</span>
+                    <span class="val">50+</span>
+                    <span class="lbl">Positive Reviews</span>
                 </div>
             </div>
         </div>
@@ -65,36 +73,36 @@ const images = {
         <div class="chapter">
             <div class="chapter-text">
                 <div class="chapter-idx">01</div>
-                <h2>The Spark</h2>
-                <p>The story started when I was planning a trip to Pondicherry. I wanted a simple site that showed places to visit. Google gave me clutter—too much text, too many ads, and buried information.</p>
-                <p>The idea rose: <strong>Why not build a directory that just links places to Google Maps?</strong> Simple, direct, and exactly what travelers need for navigation.</p>
+                <h2>The Challenge</h2>
+                <p>The inspiration was born out of personal frustration. While planning a trip to Pondicherry, I realized the current state of travel research is inefficient. Existing directories are bloated with blog-style content, requiring excessive scrolling just to find a location.</p>
+                <p>I identified a gap for travelers—students, solo explorers, and weekenders—who didn't want fluff. They wanted <strong>trustworthy guidance, visual clarity, and immediate utility.</strong></p>
             </div>
             <div class="chapter-media">
-                <img src={images.hero} alt="The Idea Spark" /> 
+                <img src={images.hero} alt="The Challenge" /> 
             </div>
         </div>
 
         <div class="chapter">
             <div class="chapter-text">
                 <div class="chapter-idx">02</div>
-                <h2>Community Over AI</h2>
-                <p>With the AI boom, the internet felt flooded with robotic content. We realized people craved originality. I didn't want to build just another AI-generated list.</p>
-                <p>The pivot: <strong>Make it community-built.</strong> I spent 2 weeks reaching out on Reddit, gathering authentic recommendations for 5-6 cities before writing a single line of code.</p>
+                <h2>The Solution</h2>
+                <p>I built Where In India to be the antidote to "scroll fatigue." The core concept is a central hub listing curated places with direct Google Maps integrations, acknowledging that modern navigation relies on maps, not text.</p>
+                <p>In an era where travel content is increasingly AI-generated, I pivoted to a <strong>community-built model</strong>. I sourced authentic recommendations from locals to ensure originality and trust.</p>
             </div>
             <div class="chapter-media">
-                <img src={images.process} alt="Community Gathering Process" />
+                <img src={images.process} alt="The Solution" />
             </div>
         </div>
 
         <div class="chapter">
             <div class="chapter-text">
                 <div class="chapter-idx">03</div>
-                <h2>Execution & Growth</h2>
-                <p>I designed and built the website solo, focusing on a "zero friction" user experience. No complex sign-ups, no fancy animations—just instant utility, built for speed. It had to work perfectly on mobile for on-the-go travelers.</p>
-                <p>Marketing was entirely organic. I engaged deeply in travel itinerary threads on Reddit, offering genuine help. Once users realized it wasn't another "AI farm" but a human-curated effort, sentiment flipped.</p>
+                <h2>The Process</h2>
+                <p>Technical execution focused on performance using <strong>Astro</strong> for a lightweight architecture. The hardest challenge was solving the "content problem" without AI. I executed a heavy two-week outreach campaign on <strong>Reddit</strong>, engaging with local communities across 5-6 cities.</p>
+                <p>I also implemented Ahrefs and Google Search Console early to optimize for organic search, ensuring the project wasn't just built, but seen.</p>
             </div>
             <div class="chapter-media">
-                <img src={images.mobile} alt="Mobile View Execution" />
+                <img src={images.mobile} alt="The Process" />
             </div>
         </div>
 
@@ -103,21 +111,21 @@ const images = {
 
     <section class="features-section">
       <div class="container">
-        <h2 class="section-label">System Features</h2>
+        <h2 class="section-label">Key Features</h2>
         <div class="bento-grid">
-            <div class="bento-item"><h3>Search System</h3><p>Instant, seamless search for cities, specific places, and categories without page reloads.</p></div>
-            <div class="bento-item"><h3>Place Pages</h3><p>Minimalist pages showing only essentials: Description, accurate Images, and key Details.</p></div>
-            <div class="bento-item"><h3>User Contributions</h3><p>A validated submission form allowing locals to easily recommend their favorite hidden spots.</p></div>
-            <div class="bento-item"><h3>Map Integration</h3><p>Every location links directly to its exact Google Maps coordinate for one-click navigation.</p></div>
-            <div class="bento-item"><h3>Travel Stories</h3><p>A dedicated blog-like section for users to share deeper narratives and itineraries with images.</p></div>
-            <div class="bento-item"><h3>Feedback Loop</h3><p>Integrated mechanism allowing users to quickly report inaccuracies, keeping data fresh.</p></div>
+            <div class="bento-item"><h3>Curated City Pages</h3><p>Clean listings of places to visit without the clutter of traditional blogs.</p></div>
+            <div class="bento-item"><h3>Maps Integration</h3><p>One-click navigation via Google Maps for every single destination.</p></div>
+            <div class="bento-item"><h3>Community Contributions</h3><p>A "Submit Your Story" feature allowing locals to share hidden gems.</p></div>
+            <div class="bento-item"><h3>Saved Lists</h3><p>Tools for users to plan, organize, and bucket-list their future trips.</p></div>
+            <div class="bento-item"><h3>Fast Navigation</h3><p>A UI designed specifically for quick decision-making and speed.</p></div>
+            <div class="bento-item"><h3>Feedback System</h3><p>Integrated loop for users to validate data and suggest improvements.</p></div>
         </div>
         <div class="feature-big-img"><img src={images.features} alt="Features Overview" /></div>
       </div>
     </section>
 
     <section class="nav-footer">
-        <a href="/" class="back-btn">Back to Home</a>
+        <a href="/projects" class="back-btn">Back to Home</a>
     </section>
 
   </main>
@@ -183,8 +191,25 @@ const images = {
     font-size: 1.15rem;
     color: #999;
     line-height: 1.6;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     max-width: 500px;
+  }
+
+  /* New Tech Pills Style */
+  .tech-stack-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tech-pill {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #888;
+    background: #111;
   }
 
   .hero-btn {
@@ -258,8 +283,7 @@ const images = {
 
   .chapter {
     display: grid;
-    /* 1fr for text, 450px fixed for image column */
-    grid-template-columns: 1fr 450px;
+    grid-template-columns: 1fr 350px;
     gap: 4rem;
     margin-bottom: 4rem;
     padding-bottom: 4rem;
@@ -298,12 +322,10 @@ const images = {
     margin-bottom: 1.5rem;
   }
 
-  /* Standardized Image Container (16:9) */
+  /* 16:9 Image Container on RIGHT */
   .chapter-media {
     width: 100%;
-    /* Replaced fixed height with aspect-ratio for perfect 16:9 */
     aspect-ratio: 16 / 9;
-    height: auto;
     border: 1px solid #222;
     padding: 5px;
     background: #111;
@@ -389,10 +411,9 @@ const images = {
     }
     .hero-image-frame { order: -1; }
     
-    /* On mobile, text on top, image below */
     .chapter-media { 
-        width: 100%; /* Ensure full width on mobile */
-        height: auto;
+        width: 100%; 
+        height: auto; 
         aspect-ratio: 16/9;
     }
     .chapter-text { 

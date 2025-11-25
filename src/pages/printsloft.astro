@@ -1,361 +1,458 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const images = {
+  hero: "/assets/pl-hero.png",
+  vision: "/assets/pl-vision.png",     // Shot of the physical prints
+  challenge: "/assets/pl-challenge.png", // Graph or mobile analytics showing drop-off
+  solution: "/assets/pl-solution.png",   // Shot of the new custom landing page
+  features: "/assets/pl-features.png"
+};
 ---
 
-<Layout title="Eric Alex | PrintsLoft">
-  <main class="creative-page">
+<Layout title="Printsloft | Project Case Study">
+  <main class="case-study">
     
-    <section class="moodboard-hero">
-      
-      <div class="floating-card left-card">
-        <img src="/assets/prints-1.jpg" alt="Paris Print" />
-      </div>
+    <section class="cs-hero">
+      <div class="container">
+        <div class="hero-grid">
+            <div class="hero-header">
+                <div class="meta-tags">
+                    <span>E-Commerce</span>
+                    <span class="separator">•</span>
+                    <span>Photography</span>
+                    <span class="separator">•</span>
+                    <span>D2C</span>
+                </div>
+                <h1>Printsloft</h1>
+                <p class="hero-lead">Bringing the beauty of travel to the physical world. Validating a lean e-commerce model for the aesthetic collector.</p>
+                
+                <div class="tech-stack-row">
+                    <span class="tech-pill">Meta Ads</span>
+                    <span class="tech-pill">Custom HTML/CSS</span>
+                    <span class="tech-pill">Analytics</span>
+                </div>
 
-      <div class="hero-center">
-        <span class="brand-tag">E-Commerce & Art</span>
-        <h1 class="hero-title">PrintsLoft</h1>
-        <p class="hero-subtitle">
-          Turning breathtaking travel moments into premium, hand-shot prints. 
-          Bringing the world’s most iconic destinations into your home.
-        </p>
-        <div class="hero-meta">
-          <span>Founder & Creator</span>
-          <span class="separator">•</span>
-          <span>D2C Brand</span>
-        </div>
-      </div>
-
-      <div class="floating-card right-card">
-        <img src="/assets/prints-2.jpg" alt="Kyoto Print" />
-      </div>
-
-    </section>
-
-    <section class="mission-section">
-      <div class="mission-visual">
-        <img src="/assets/prints-3.jpg" alt="Prints on wall" class="feature-img" />
-      </div>
-      <div class="mission-text">
-        <h2>Transforming Memories into Art</h2>
-        <p>
-          I founded PrintsLoft with a singular mission: to curate the nostalgia of travel. 
-          It isn't just about selling photos; it's about capturing the feeling of a Parisian morning 
-          or a sunset in Santorini and designing it as a premium art piece for modern interiors.
-        </p>
-        <a href="https://instagram.com/PrintsLoft" target="_blank" class="social-link">
-          Visit Shop on Instagram &rarr;
-        </a>
-      </div>
-    </section>
-
-    <section class="collection-section">
-      <div class="section-header">
-        <h2>The Collection</h2>
-        <p>Curated, Limited, Story-Driven.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <div class="img-frame">
-            <img src="/assets/prints-4.jpg" alt="Limited Edition" />
-          </div>
-          <h3>Limited-Edition</h3>
-          <p>Every piece is an original, personally captured and edited. Quality over quantity.</p>
-        </div>
-
-        <div class="gallery-item down-shifted"> <div class="img-frame">
-            <img src="/assets/prints-5.jpg" alt="Curated Destinations" />
-          </div>
-          <h3>Curated Destinations</h3>
-          <p>Iconic locations like Paris, Santorini, and Kyoto, styled for aesthetic beauty.</p>
-        </div>
-
-        <div class="gallery-item">
-          <div class="img-frame">
-            <img src="/assets/prints-6.jpg" alt="Story Driven" />
-          </div>
-          <h3>Story-Driven Art</h3>
-          <p>Designed to evoke travel nostalgia and bring warmth to a space.</p>
+                <a href="#" class="hero-btn">
+                    View Collection <span class="btn-icon">↗</span>
+                </a>
+            </div>
+            
+            <div class="hero-image-frame">
+                <img src={images.hero} alt="Printsloft Collection" />
+            </div>
         </div>
       </div>
     </section>
 
-    <section class="roadmap-section">
-      <div class="roadmap-container">
-        <h2 class="roadmap-title">What I’m Building</h2>
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="val">&gt;5%</span>
+                    <span class="lbl">Ad CTR</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">₹0.94</span>
+                    <span class="lbl">Cost Per Click</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">-50%</span>
+                    <span class="lbl">Drop-off Reduced</span>
+                </div>
+                <div class="stat-box">
+                    <span class="val">22%</span>
+                    <span class="lbl">Engagement Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+      <div class="container">
         
-        <div class="roadmap-list">
-          <div class="roadmap-step">
-            <span class="step-num">01</span>
-            <div class="step-content">
-              <h4>Phase 1: Launch</h4>
-              <p>Launching with A5-sized premium travel prints to test market fit and accessibility.</p>
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">01</div>
+                <h2>The Vision</h2>
+                <p>As a photographer, I realized that while we capture hundreds of photos, they often remain trapped behind glass screens—viewed once and forgotten in the cloud. Printsloft was born from a desire to liberate these moments.</p>
+                <p>Targeting the "Aesthetic Collector," we curate high-quality, original photography from India’s scenic destinations into premium physical prints. The brand philosophy is simple: <strong>"What your camera missed, I captured."</strong></p>
             </div>
-          </div>
-          
-          <div class="roadmap-step">
-            <span class="step-num">02</span>
-            <div class="step-content">
-              <h4>Phase 2: Expansion</h4>
-              <p>Scaling into larger formats, exclusive framed collections, and new ways to bring memories to life.</p>
+            <div class="chapter-media">
+                <img src={images.vision} alt="Physical Prints Showcase" /> 
             </div>
-          </div>
-          
-          <div class="roadmap-step">
-            <span class="step-num">03</span>
-            <div class="step-content">
-              <h4>Community Growth</h4>
-              <p>Building a global audience on Instagram & Pinterest through aesthetic storytelling.</p>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">02</div>
+                <h2>The Leaky Bucket</h2>
+                <p>The product—300 GSM matte-finish postcards—was ready, but the path to market hit a wall. We were driving high-quality traffic at an exceptionally low cost (sub-₹1 clicks), yet facing a <strong>36-73% visitor drop-off rate.</strong></p>
+                <p>Data analysis revealed the bottleneck wasn't the product; it was infrastructure. Site load speeds on mobile were creating a "leaky bucket," losing customers before they could experience the brand. Furthermore, as a new entity, converting "cold" traffic immediately was a major friction point.</p>
             </div>
-          </div>
+            <div class="chapter-media">
+                <img src={images.challenge} alt="Analytics showing drop-off" />
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-text">
+                <div class="chapter-idx">03</div>
+                <h2>The Solution & Process</h2>
+                <p>I approached this as a data-driven product iteration. To solve the drop-off rate, I shifted to a <strong>lean, custom-coded landing page</strong>, stripping away bloat to ensure instant loading.</p>
+                <p>Strategically, I pivoted to a "Content-First" approach. Instead of forcing conversions through aggressive ads, I realized that trust cannot be bought; it must be built. We focused on storytelling to warm up the traffic before asking for the sale.</p>
+            </div>
+            <div class="chapter-media">
+                <img src={images.solution} alt="Optimized Landing Page" />
+            </div>
         </div>
 
       </div>
     </section>
 
-    <div class="page-footer">
-      <a href="/projects" class="back-link">&larr; Back to Projects</a>
-    </div>
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-label">Product & Strategy</h2>
+        <div class="bento-grid">
+            <div class="bento-item">
+                <h3>Premium Build</h3>
+                <p>300 GSM matte-finish paper with archival inks for longevity.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Lean Architecture</h3>
+                <p>Custom HTML/CSS landing pages designed for sub-second load times.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Data-Driven Ads</h3>
+                <p>Optimized Meta Ads targeting achieving a CPC of just ₹0.94.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Content First</h3>
+                <p>A strategy focused on storytelling and brand building over hard sales.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Curated Collections</h3>
+                <p>Original photography from Munnar, Goa, and Varkala.</p>
+            </div>
+            <div class="bento-item">
+                <h3>High Engagement</h3>
+                <p>Creative assets maintaining a social engagement rate of over 22%.</p>
+            </div>
+        </div>
+        <div class="feature-big-img">
+            <img src={images.features} alt="Printsloft Branding" />
+        </div>
+      </div>
+    </section>
+
+    <section class="nav-footer">
+        <a href="/" class="back-btn">Back to Home</a>
+    </section>
 
   </main>
 </Layout>
 
 <style>
-  .creative-page {
-    width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll from tilted images */
+  /* --- LAYOUT RESET --- */
+  .case-study {
+    background-color: #0A0A0A;
+    color: #EDEDED;
+    padding-top: 6rem;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
 
-  /* --- 1. MOODBOARD HERO --- */
-  .moodboard-hero {
-    min-height: 90vh;
+  .container {
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* --- HERO --- */
+  .cs-hero { margin-bottom: 4rem; }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; 
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-header { padding-right: 1rem; }
+
+  .meta-tags {
+    font-family: monospace;
+    color: #B176F2;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .separator { color: #444; }
+
+  .hero-header h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -1.5px;
+    color: #fff;
+  }
+
+  .hero-lead {
+    font-size: 1.15rem;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+
+  /* Tech Pills Style */
+  .tech-stack-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tech-pill {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #888;
+    background: #111;
+  }
+
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+  }
+
+  .hero-btn:hover {
+    background-color: #B176F2;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .hero-image-frame {
+    width: 100%; 
+    border: 1px solid #2a2a2a;
+    padding: 8px;
+    background: #111;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+
+  /* --- STATS STRIP --- */
+  .stats-strip {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    background: #0F0F0F;
+    margin-bottom: 6rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stat-box {
+    padding: 2rem 1rem;
+    border-right: 1px solid #222;
+    text-align: center;
+  }
+  .stat-box:last-child { border-right: none; }
+
+  .stat-box .val {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-box .lbl {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  /* --- STORY CHAPTERS --- */
+  .story-section { margin-bottom: 8rem; }
+
+  .chapter {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #222;
+    align-items: start; 
+  }
+  .chapter:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .chapter-text {
+    position: relative;
+    padding-left: 4rem; 
+    padding-right: 2rem; 
+  }
+
+  .chapter-idx {
+    position: absolute;
+    left: 0;
+    top: 4px; 
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+  }
+
+  .chapter-text h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.2;
+  }
+
+  .chapter-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #A0A0A0;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Standardized Image Container */
+  .chapter-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid #222;
+    padding: 5px;
+    background: #111;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: 4rem 2rem;
-  }
-
-  .hero-center {
-    text-align: center;
-    max-width: 600px;
-    z-index: 2; /* On top of images */
-    position: relative;
-  }
-
-  .brand-tag {
-    font-size: 0.9rem;
-    color: #FF4444;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border: 1px solid rgba(255, 68, 68, 0.3);
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(5px);
-  }
-
-  .hero-title {
-    font-size: 5rem;
-    margin: 1.5rem 0;
-    line-height: 1;
-    font-weight: 500;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--light-text-color);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-
-  .hero-meta {
-    font-size: 1rem;
-    color: var(--text-color);
-    font-weight: 500;
-  }
-  .separator { margin: 0 0.5rem; color: var(--border-color); }
-
-  /* FLOATING CARDS */
-  .floating-card {
-    position: absolute;
-    z-index: 1;
-    transition: transform 0.5s ease;
-  }
-  
-  .floating-card img {
-    width: 280px;
-    height: auto;
-    border: 8px solid #fff; /* White photo border */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    transform: rotate(-5deg);
-  }
-
-  .left-card {
-    top: 15%;
-    left: 10%;
-  }
-  
-  .right-card {
-    bottom: 15%;
-    right: 10%;
-  }
-  
-  .right-card img {
-    transform: rotate(8deg);
-    width: 320px;
-  }
-
-  .moodboard-hero:hover .left-card { transform: translateY(-20px) rotate(-8deg); }
-  .moodboard-hero:hover .right-card { transform: translateY(-20px) rotate(10deg); }
-
-
-  /* --- 2. MISSION SECTION --- */
-  .mission-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 6rem 2rem;
-  }
-
-  .feature-img {
-    width: 100%;
-    border-radius: 4px;
-    opacity: 0.9;
-  }
-
-  .mission-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .mission-text p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: var(--light-text-color);
-    margin-bottom: 2rem;
-  }
-
-  .social-link {
-    font-size: 1.1rem;
-    color: #FF4444;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border 0.3s;
-  }
-  .social-link:hover { border-bottom-color: #FF4444; }
-
-
-  /* --- 3. COLLECTION SECTION --- */
-  .collection-section {
-    padding: 6rem 2rem;
-    border-top: 1px solid var(--border-color);
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 5rem;
-  }
-  .section-header h2 { font-size: 3rem; margin: 0 0 0.5rem 0; }
-  .section-header p { color: var(--light-text-color); }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    max-width: 1300px;
-    margin: 0 auto;
-  }
-
-  .gallery-item {
-    text-align: center;
-  }
-
-  /* Stagger the middle item down */
-  .down-shifted {
-    margin-top: 4rem; 
-  }
-
-  .img-frame {
-    margin-bottom: 1.5rem;
     overflow: hidden;
-    border-radius: 2px;
   }
-
-  .img-frame img {
+  
+  .chapter-media img {
     width: 100%;
-    height: 400px; /* Fixed height for alignment */
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
-    filter: grayscale(20%);
   }
 
-  .gallery-item:hover img {
-    transform: scale(1.05);
-    filter: grayscale(0%);
-  }
+  /* --- FEATURES BENTO --- */
+  .features-section { margin-bottom: 8rem; }
 
-  .gallery-item h3 { font-size: 1.4rem; margin: 0 0 0.5rem 0; }
-  .gallery-item p { color: var(--light-text-color); line-height: 1.5; }
-
-
-  /* --- 4. ROADMAP SECTION --- */
-  .roadmap-section {
-    background-color: #111; /* Slightly lighter background */
-    padding: 6rem 2rem;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .roadmap-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .roadmap-title {
-    font-size: 2.5rem;
+  .section-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
     margin-bottom: 3rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 1rem;
+    display: block;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .bento-item {
+    background: #111;
+    border: 1px solid #222;
+    padding: 2rem;
+    transition: border-color 0.3s;
+  }
+  .bento-item:hover { border-color: #444; }
+
+  .bento-item h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .bento-item p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .feature-big-img { border: 1px solid #222; }
+
+  /* --- NAV FOOTER --- */
+  .nav-footer {
     text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid #222;
   }
 
-  .roadmap-step {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px dashed var(--border-color);
+  .back-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    padding-bottom: 4px;
+    transition: all 0.3s;
   }
-  .roadmap-step:last-child { border: none; margin: 0; padding: 0; }
-
-  .step-num {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #FF4444;
-    font-family: monospace;
-  }
-
-  .step-content h4 { margin: 0 0 0.5rem 0; font-size: 1.4rem; }
-  .step-content p { margin: 0; color: var(--light-text-color); line-height: 1.6; }
-
-  /* Footer */
-  .page-footer {
-    padding: 4rem 2rem;
-    text-align: center;
-  }
-  .back-link { color: var(--light-text-color); text-decoration: none; }
-  .back-link:hover { color: #fff; }
-
+  .back-btn:hover { border-color: #B176F2; color: #B176F2; }
 
   /* --- MOBILE --- */
-  @media (max-width: 1024px) {
-    .floating-card { display: none; } /* Hide floating images on tablet/mobile */
-    .hero-title { font-size: 3.5rem; }
-    .mission-section { grid-template-columns: 1fr; gap: 2rem; }
-    .gallery-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .down-shifted { margin-top: 0; } /* Remove stagger on mobile */
-    .img-frame img { height: auto; aspect-ratio: 4/5; }
+  @media (max-width: 900px) {
+    .hero-grid, .chapter {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .hero-image-frame { order: -1; }
+    
+    .chapter-media { 
+        width: 100%; 
+        height: auto; 
+        aspect-ratio: 16/9;
+    }
+    .chapter-text { 
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1rem; 
+    }
+    .chapter-idx {
+        position: relative; 
+        margin-bottom: 0.5rem;
+        display: block;
+        top: 0;
+    }
+    
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .stat-box:nth-child(2) { border-right: none; }
+    .stat-box { border-bottom: 1px solid #222; }
+    .stat-box:nth-last-child(-n+2) { border-bottom: none; }
   }
 </style>

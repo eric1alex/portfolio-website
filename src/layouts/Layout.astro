@@ -15,6 +15,15 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMWDY8P9GQ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QMWDY8P9GQ');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -96,15 +105,7 @@ const { title } = Astro.props;
         <h4>Let's Work Together</h4>
         <p>eric14alex@gmail.com</p>
       </div>
-      <div class="footer-column">
-        <h4>You can follow us</h4>
-        <div class="social-links">
-          <a href="#">Fb.</a>
-          <a href="#">Tw.</a>
-          <a href="#">In.</a>
-          <a href="#">Be.</a>
-        </div>
-      </div>
+
     </footer>
   </body>
 </html>
