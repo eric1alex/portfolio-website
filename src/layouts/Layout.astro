@@ -15,13 +15,16 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMWDY8P9GQ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMWDY8P9GQ"
+    ></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-QMWDY8P9GQ');
+      gtag("config", "G-QMWDY8P9GQ");
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,7 +48,11 @@ const { title } = Astro.props;
         <a href="/work" class="nav-link">WORK</a>
         <a href="/projects" class="nav-link">PROJECTS</a>
         <a href="/creatives" class="nav-link">CREATIVES</a>
-        <a href="#" class="nav-link">SHOP</a>
+        <a
+          href="/Eric Alex - Marketing Associate - 1.6YOE.pdf"
+          class="nav-link"
+          download>RESUME</a
+        >
       </nav>
       <div class="menu-icon" id="menuIcon">
         <svg
@@ -90,7 +97,11 @@ const { title } = Astro.props;
         <a href="/work" class="nav-link">WORK</a>
         <a href="/projects" class="nav-link">PROJECTS</a>
         <a href="/creatives" class="nav-link">CREATIVES</a>
-        <a href="#" class="nav-link">SHOP</a>
+        <a
+          href="/Eric Alex - Marketing Associate - 1.6YOE.pdf"
+          class="nav-link"
+          download>RESUME</a
+        >
       </nav>
     </div>
 
@@ -105,7 +116,6 @@ const { title } = Astro.props;
         <h4>Let's Work Together</h4>
         <p>eric14alex@gmail.com</p>
       </div>
-
     </footer>
   </body>
 </html>
@@ -192,7 +202,7 @@ const { title } = Astro.props;
 
   /* **CRITICAL FIX 1**: Hide hamburger icon by default */
   .menu-icon {
-    display: none; 
+    display: none;
     cursor: pointer;
   }
 
@@ -210,7 +220,7 @@ const { title } = Astro.props;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    
+
     /* **CRITICAL FIX 2**: Hide menu off-screen by default */
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -238,7 +248,7 @@ const { title } = Astro.props;
     flex-direction: column; /* Stack links vertically */
     align-items: center;
     justify-content: center;
-    flex-grow: 1; 
+    flex-grow: 1;
     gap: 1rem;
   }
 
@@ -288,11 +298,11 @@ const { title } = Astro.props;
   @media (max-width: 1024px) {
     /* **CRITICAL FIX 3**: Hide desktop nav */
     .main-nav {
-      display: none; 
+      display: none;
     }
     /* **CRITICAL FIX 4**: Show hamburger icon and push to right */
     .menu-icon {
-      display: block; 
+      display: block;
       margin-left: auto;
     }
   }
@@ -302,7 +312,7 @@ const { title } = Astro.props;
       padding: 1rem;
     }
     .main-footer {
-      padding: 1.5rem 1rem; 
+      padding: 1.5rem 1rem;
       justify-content: center; /* Center footer content */
     }
     .top-bar {
@@ -314,47 +324,47 @@ const { title } = Astro.props;
     .footer-column:first-child {
       display: block;
       text-align: center; /* Center footer text */
-      flex-basis: auto; 
+      flex-basis: auto;
     }
   }
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Get all the elements
-    const menuIcon = document.getElementById('menuIcon');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuClose = document.getElementById('menuClose');
-    const navLinks = mobileMenu.querySelectorAll('.nav-link');
+    const menuIcon = document.getElementById("menuIcon");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuClose = document.getElementById("menuClose");
+    const navLinks = mobileMenu.querySelectorAll(".nav-link");
 
     // Function to open the menu
     function openMenu() {
       if (mobileMenu) {
-        mobileMenu.classList.add('is-open');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        mobileMenu.classList.add("is-open");
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
       }
     }
 
     // Function to close the menu
     function closeMenu() {
       if (mobileMenu) {
-        mobileMenu.classList.remove('is-open');
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        mobileMenu.classList.remove("is-open");
+        document.body.style.overflow = "auto"; // Re-enable scrolling
       }
     }
 
     // Event Listeners
     if (menuIcon) {
-      menuIcon.addEventListener('click', openMenu);
+      menuIcon.addEventListener("click", openMenu);
     }
 
     if (menuClose) {
-      menuClose.addEventListener('click', closeMenu);
+      menuClose.addEventListener("click", closeMenu);
     }
 
     // Close menu when a nav link is clicked
     navLinks.forEach((link) => {
-      link.addEventListener('click', closeMenu);
+      link.addEventListener("click", closeMenu);
     });
   });
 </script>
